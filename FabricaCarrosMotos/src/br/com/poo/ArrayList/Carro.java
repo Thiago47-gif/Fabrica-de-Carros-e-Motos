@@ -1,34 +1,57 @@
 package br.com.poo.ArrayList;
 
-public class Carro extends Veiculo {
+import java.util.ArrayList;
 
-	private String Chassi;
-	private String Tracao;
+public class Carro implements Veiculo {
 
+	private String Ano;
+    private String Cor;
+    private String Modelo;
+    private String Placa;
+    private Double valorVeiculo;
 
-	public String getChassi() {
-		return Chassi;
+    ArrayList<Carro> listCarros = new ArrayList<Carro>();
+	
+    @Override
+	public String getAno() {
+		return Ano;
 	}
-	public void setChassi(String chassi) {
-		Chassi = chassi;
+	@Override
+	public void setAno(String ano) {
+		Ano = ano;
 	}
-	public String getTracao() {
-		return Tracao;
+	@Override
+	public String getCor() {
+		return Cor;
 	}
-	public void setTracao(String tracao) {
-		Tracao = tracao;
+	@Override
+	public void setCor(String cor) {
+		Cor = cor;
 	}
-
-	//Override
-	public String toString() {
-
-		return String.format("Carro\n") +
-		String.format("Modelo: %s\n", Modelo) +
-		String.format("Cor: %s\n", Cor) +
-		String.format("Ano: %s\n", Ano) +
-		String.format("Placa: %s\n", Placa +
-		String.format("\nModelo: %s\n", Tracao) +
-		String.format("Cor: %s\n", Chassi));
+	@Override
+	public String getModelo() {
+		return Modelo;
+	}
+	@Override
+	public void setModelo(String modelo) {
+		Modelo = modelo;
+	}
+	@Override
+	public String getPlaca() {
+		return Placa;
+	}
+	@Override
+	public void setPlaca(String placa) {
+		Placa = placa;
+	}
+	@Override
+	public Double getValor() {
+		return valorVeiculo;
+	}
+	@Override
+	public void setValor(Double valorVeiculo) {
+		this.valorVeiculo = valorVeiculo;
+		
 	}
 
 }

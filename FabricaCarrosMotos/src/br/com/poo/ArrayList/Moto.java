@@ -1,32 +1,64 @@
 package br.com.poo.ArrayList;
 
-public class Moto extends Veiculo {
+import java.util.ArrayList;
 
-	private String Categoria;
-	private String Cilindro;
+public class Moto implements Veiculo {
 
+	private String Ano;
+    private String Cor;
+    private String Modelo;
+    private String Placa;
+    private Double valorVeiculo;
+    
+	ArrayList<Moto> listMotos = new ArrayList<Moto>();
 
-	public String getCategoria() {
-		return Categoria;
+	@Override
+	public String getAno() {
+		return Ano;
 	}
-	public void setCategoria(String categoria) {
-		Categoria = categoria;
+	public void setAno(String ano) {
+		this.Ano = ano;
 	}
-	public String getCilindro() {
-		return Cilindro;
+	
+	@Override
+	public String getCor() {
+		return Cor;
 	}
-	public void setCilindro(String cilindro) {
-		Cilindro = cilindro;
+	public void setCor(String cor) {
+		this.Cor = cor;
 	}
-public String toString() {
 
-		return String.format("\nMoto\n") +
-		String.format("Modelo: %s\n", Modelo) +
-		String.format("Cor: %s\n", Cor) +
-		String.format("Ano: %s\n", Ano) +
-		String.format("Placa: %s\n", Placa) +
-		String.format("Categoria: %s\n", Categoria +
-		String.format("\nCilindro: %s\n", Cilindro));
+	@Override
+	public String getModelo() {
+		return Modelo;
+	}
+	@Override
+	public void setModelo(String modelo) {
+		this.Modelo = modelo;
+	}
+	@Override
+	public String getPlaca() {
+		return Placa;
+	}
+	@Override
+	public void setPlaca(String placa) {
+		this.Placa = placa;
+	}
+	@Override
+	public Double getValor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setValor(Double valorVeiculo) {
+		// TODO Auto-generated method stub
+		
+	}
+	public Double getValorVeiculo() {
+		return valorVeiculo;
+	}
+	public void setValorVeiculo(Double valorVeiculo) {
+		this.valorVeiculo = valorVeiculo;
 	}
 
 }

@@ -1,37 +1,19 @@
 package br.com.poo.ArrayList;
 
-public class Veiculo {
+public interface Veiculo {
 	
-	protected String Cor;
-	protected String Ano;
-	protected String Modelo;
-	protected String Placa;
+	public String getCor();
+	public void setCor(String cor);
+	
+	public String getAno();
+	public void setAno(String ano);
+	
+	public String getModelo();
+	public void setModelo(String modelo);
+	
+	public String getPlaca();
+	public void setPlaca(String placa);
 
-
-	public String getCor() {
-		return Cor;
-	}
-	public void setCor(String cor) {
-		Cor = cor;
-	}
-	public String getAno() {
-		return Ano;
-	}
-	public void setAno(String ano) {
-		Ano = ano;
-	}
-	public String getModelo() {
-		return Modelo;
-	}
-	public void setModelo(String modelo) {
-		Modelo = modelo;
-	}
-	public String getPlaca() {
-		return Placa;
-	}
-	public void setPlaca(String placa) {
-		Placa = placa;
-	}
-
-
+	public Double getValor();
+	public void setValor(Double valorVeiculo);
 }
